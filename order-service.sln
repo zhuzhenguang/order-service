@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "order-service", "src\order-service\order-service.csproj", "{79287278-AD08-49EC-9309-BE9B77F7183B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "order-service-test", "test\order-service-test\order-service-test.csproj", "{43D769B6-C25A-4E65-AA35-1C8FF478BF09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79287278-AD08-49EC-9309-BE9B77F7183B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79287278-AD08-49EC-9309-BE9B77F7183B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79287278-AD08-49EC-9309-BE9B77F7183B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79287278-AD08-49EC-9309-BE9B77F7183B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43D769B6-C25A-4E65-AA35-1C8FF478BF09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D769B6-C25A-4E65-AA35-1C8FF478BF09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D769B6-C25A-4E65-AA35-1C8FF478BF09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43D769B6-C25A-4E65-AA35-1C8FF478BF09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
