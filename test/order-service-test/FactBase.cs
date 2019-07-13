@@ -2,6 +2,7 @@ using System;
 using Microsoft.Extensions.DependencyInjection;
 using NHibernate;
 using order_service.Infrastructures.Bootstrap;
+using order_service.Infrastructures.Bootstrap.DatabaseModules;
 
 namespace order_service_test
 {

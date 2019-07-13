@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using NHibernate;
-using order_service_test.TestDomain;
+using order_service.Domains;
 using Xunit;
 
 namespace order_service_test

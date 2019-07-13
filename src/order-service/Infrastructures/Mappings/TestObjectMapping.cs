@@ -1,13 +1,8 @@
 using FluentNHibernate.Mapping;
+using order_service.Domains;
 
-namespace order_service_test.TestDomain
+namespace order_service.Infrastructures.Mappings
 {
-    public class TestObject
-    {
-        public virtual long Id { get; set; }
-        public virtual string Name { get; set; }
-    }
-
     public class TestObjectMapping : ClassMap<TestObject>
     {
         public TestObjectMapping()

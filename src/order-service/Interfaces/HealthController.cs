@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 using NHibernate;
+using order_service.Domains;
 
 namespace order_service.Controllers
 {
@@ -18,6 +20,7 @@ namespace order_service.Controllers
         [HttpGet]
         public ActionResult<string> Get(string check = "all")
         {
+            session.Query<TestObject>().ToList();
             return "Order Service is OK";
         }
 

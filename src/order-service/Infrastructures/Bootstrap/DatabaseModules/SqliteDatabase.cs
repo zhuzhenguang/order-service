@@ -5,9 +5,9 @@ using NHibernate;
 using NHibernate.Context;
 using order_service.Controllers;
 
-namespace order_service.Infrastructures.Bootstrap
+namespace order_service.Infrastructures.Bootstrap.DatabaseModules
 {
-    public class SqliteModule : IServiceModule
+    public class SqliteDatabase : IServiceModule
     {
         public void Load(IServiceCollection services)
         {

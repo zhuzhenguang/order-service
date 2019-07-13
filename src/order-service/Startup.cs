@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using order_service.Infrastructures.Bootstrap;
+using order_service.Infrastructures.Bootstrap.DatabaseModules;
 
 namespace order_service
 {
@@ -19,7 +20,7 @@ namespace order_service
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            new Bootstrapper(services, new SqliteModule()).Bootstrap();
+            new Bootstrapper(services, new InMemoryDatabase()).Bootstrap();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

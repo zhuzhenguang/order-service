@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
+using order_service.Infrastructures.Bootstrap.DatabaseModules;
 
 namespace order_service.Infrastructures.Bootstrap
 {
@@ -13,7 +14,7 @@ namespace order_service.Infrastructures.Bootstrap
             this.services = services;
             modules = new[]
             {
-                customDbModule ?? new SqliteModule()
+                customDbModule ?? new SqliteDatabase()
             };
         }
 

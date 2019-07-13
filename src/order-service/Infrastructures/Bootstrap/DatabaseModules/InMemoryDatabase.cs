@@ -8,15 +8,11 @@ using NHibernate.Context;
 using NHibernate.Engine;
 using NHibernate.Tool.hbm2ddl;
 using order_service.Controllers;
-using order_service.Infrastructures.Bootstrap;
-using order_service_test.TestDomain;
-using Xunit.Abstractions;
 
-namespace order_service_test
+namespace order_service.Infrastructures.Bootstrap.DatabaseModules
 {
     public class InMemoryDatabase : IServiceModule
     {
-        private readonly ITestOutputHelper output;
         private const string ConnectionString = "Data Source=:memory:;Version=3;New=True;DateTimeKind=Utc;";
 
         private static Configuration inMemDbConfiguration;
@@ -44,7 +40,6 @@ namespace order_service_test
         {
             return sessionFactory ?? (sessionFactory = Fluently.Configure()
                        .Database(SQLiteConfiguration.Standard.InMemory().ConnectionString(ConnectionString))
-                       .Mappings(m => m.FluentMappings.AddFromAssemblyOf<TestObject>())
                        .Mappings(m => m.FluentMappings.AddFromAssemblyOf<HealthController>())
                        .CurrentSessionContext<ThreadStaticSessionContext>()
                        .ExposeConfiguration(cfg => { inMemDbConfiguration = cfg; })
