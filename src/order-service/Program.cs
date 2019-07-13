@@ -16,7 +16,7 @@ namespace order_service
                 .CreateDefaultBuilder(args)
                 .UseKestrel(options =>
                 {
-                    options.Listen(IPAddress.Loopback, 5000); //HTTP port
+                    options.Listen(IPAddress.Any, 5000); //HTTP port
                 })
                 .UseStartup<Startup>();
     }
